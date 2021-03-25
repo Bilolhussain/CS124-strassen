@@ -19,7 +19,7 @@ def populate_matrix(x):
         
 # conventional matrix mult
 def matrixmultiply(m1, m2):
-    product = generate_matrix(len(m1))
+        product = generate_matrix(len(m1))
         # assume same dimension
         if (len(m1) != len(m2)):
             print("attempted to multiply matrices of different dimensions")

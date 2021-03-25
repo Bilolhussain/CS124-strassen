@@ -1,23 +1,25 @@
-  import random
-  import datetime
-  import math
+import random
+import datetime
+import math
   
-  def generate_matrix(d):
-        d = int(d)
-        return [[0]*d]*d
+def generate_matrix(d):
+  d = int(d)
+  return [[0]*d]*d
+        
 
-  def populate_matrix(x):
-        d = len(x)
-        random.seed(datetime.datetime.now())
-        for i in range(d):
-            for j in range(d):
-                x[i][j] = random.randint(0, 2) - 1
+def populate_matrix(x):
+  d = len(x)
+  random.seed(datetime.datetime.now())
+  for i in range(d):
+    for j in range(d):
+      x[i][j] = random.randint(0, 2) - 1
 
-        return x
+  return x
 
-    # conventional matrix mult
-    def matrixmultiply(m1, m2):
-        product = generate_matrix(len(m1))
+        
+# conventional matrix mult
+def matrixmultiply(m1, m2):
+    product = generate_matrix(len(m1))
         # assume same dimension
         if (len(m1) != len(m2)):
             print("attempted to multiply matrices of different dimensions")
@@ -30,9 +32,8 @@
                 product[row][col] = dot_pd
         return product
 
-    # multiply with strassen's algorithm and a threshold n for regular multiplication
-    
-    def strassen(m1, m2, n):
+# multiply with strassen's algorithm and a threshold n for regular multiplication
+def strassen(m1, m2, n):
         # print(len(m1))
         orig = len(m1)
         # if dimensions are at or below n, we use regular multiplication
@@ -109,7 +110,7 @@
     # padding as we go along
 
 
-    def pad(m):
+def pad(m):
         l = len(m)
         for i in range(l):
             m[i] = m[i] + [0]
@@ -118,8 +119,7 @@
 
     # undo padding when final matrix product is calculated
 
-
-    def unpad(m):
+def unpad(m):
         l = len(m)
         for i in range(l):
             m[i] = m[i][:l-1]
@@ -129,14 +129,14 @@
     # pretty prints a matrix
 
 
-    def printmatrix(m):
+def printmatrix(m):
         l = len(m)
         for i in range(l):
             print(m[i])
         print("\n")
 
 
-    def add(m1, m2):
+def add(m1, m2):
         l = len(m1)
         # assume same dimension
         if (l != len(m2)):
@@ -153,7 +153,7 @@
     # subtracts m2 from m1
 
 
-    def subtract(m1, m2):
+def subtract(m1, m2):
         l = len(m1)
         # assume same dimension
         if (l != len(m2)):

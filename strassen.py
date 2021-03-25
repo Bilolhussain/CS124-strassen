@@ -1,7 +1,5 @@
 from testfunctions import printmatrix, strassen, matrixmultiply
 import datetime
-from test_functions import *
-from math import ceil, floor
 import random
 import sys
 

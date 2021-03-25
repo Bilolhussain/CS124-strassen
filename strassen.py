@@ -1,4 +1,4 @@
-from test_functions import printmatrix, strassen, matrixmultiply
+from test_functions import generate_matrix, printmatrix, strassen, matrixmultiply
 import datetime
 import random
 import sys

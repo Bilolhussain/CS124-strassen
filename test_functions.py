@@ -1,3 +1,7 @@
+  import random
+  import datetime
+  import math
+  
   def generate_matrix(d):
         d = int(d)
         return [[0]*d]*d

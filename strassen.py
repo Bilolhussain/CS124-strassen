@@ -1,5 +1,4 @@
 import datetime
-from math import ceil, floor
 from random import randint
 import sys
 
